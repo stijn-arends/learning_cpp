@@ -95,19 +95,75 @@ void string_data_type(){
 
     std::string greeting = "Hello";
     // concat
-    std::string complete_greeting = greeting = " there";
+    std::string complete_greeting = greeting + " there";
     // append
     complete_greeting += "!";
 
     cout << complete_greeting << std::endl;
     cout << "Length of string: " << complete_greeting.length() << std::endl;
+    // you could also use: complete_greeting.size()
 
     // method == member - function == functions attachted to objects
 
-    // How to get user input for strings:
-    std::string user_in;
-    getline(std::cin, user_in);
-    cout << "This was the user input: " << user_in << std::endl;
+    // How to get user input for strings: (uncomment below three lines)
+    // std::string user_in;
+    // getline(std::cin, user_in);
+    // cout << "This was the user input: " << user_in << std::endl;
+
+    // String Modify Methods
+    greeting.append(" there!"); // or greeting += " there!"
+
+    // insert a char
+    greeting.insert(3, "  ");
+    cout << greeting << std::endl;
+
+    // erase/remove characters
+    greeting.erase(3, 2);
+    cout << greeting << std::endl;
+
+    // remove last char
+    greeting.pop_back();
+    cout << greeting << std::endl;
+
+    // replace part of the string: start, stop, replacement
+    greeting.replace(0, 5, "oi mate");
+    cout << greeting << std::endl;
+
+    // substring
+    cout << greeting.substr(5, 2) << std::endl;
+
+    // Find first of, returns index
+    cout << greeting.find_first_of("aeiou") << std::endl;
+
+    // Compare strings
+    std::string test = "test";
+    if (test == "test") cout << "They are equal" << std::endl;
+    // or you can use the .compare function, will return 0 if it is equal
+    if (test.compare("test") == 0) cout << "They are equal" << std::endl;
+}
+
+void literals(){
+
+    // automaticall gicv a data type
+    auto x = 5U;
+    cout << x << std::endl;
+
+    /*
+    Decimal, hexadecimal and octal
+    */
+    // Decimal:
+    int number = 30;
+    cout << number << std::endl;
+    // hexadecimal:
+    int number_hex = 0x30; // = 48
+    cout << number_hex << std::endl;
+    // octal
+    int number_oct = 030; // = 24 (or 3*8)
+    cout << number_oct << std::endl;
+
+    // you can also print a decimal to hexadecimal
+    cout << std::hex << 48 << std::endl;
+
 }
 
 int main(){
@@ -118,6 +174,8 @@ int main(){
 
     // bool_data_types();
 
-    string_data_type();
+    // string_data_type();
+
+    literals();
 
 }
