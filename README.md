@@ -3,7 +3,7 @@
 
 I am following the C++ tutorial made by **Caleb Curry** on [youtube](https://www.youtube.com/playlist?list=PL_c9BZzLwBRJVJsIfe97ey45V4LP_HXiG) to try and learn the c++ programming language.
 
-> Current video: #26
+> Current video: #36
 
 
 ## Install
