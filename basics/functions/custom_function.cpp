@@ -47,7 +47,7 @@ int main()
     You can also split the declaration and initizalization part of a function.
     You put the declaration at the top of the page and the initizalization at the bottom.
     For example the divide function:
-        */
+    */
 
     cout << "Divide 5 - 3: " << divide(5, 3) << std::endl;
 
