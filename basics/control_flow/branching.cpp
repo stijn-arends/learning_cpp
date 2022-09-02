@@ -100,12 +100,31 @@ void switches(){
 }
 
 
+void ternary_operator(){
+    int answer = 8;
+    int guess;
+
+    cout << "Guess the correct number: ";
+    cin >> guess;
+
+    guess == answer ? cout << "You got the correct answer" << endl :  cout << "To bad wrong." << endl;
+
+    // You can also use the ternary operator to assign to a new variable
+
+    bool correct = guess == answer ? true : false;
+
+    cout << "Is the guess correct? " << std::boolalpha << correct << endl; 
+
+}
+
 int main(){
     // conditionals();
 
     // guessing_game();
 
-    switches();
+    // switches();
+
+    ternary_operator();
 
     return 0;
 }
