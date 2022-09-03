@@ -3,8 +3,18 @@
 #include <cmath>
 #include <cstdlib>
 #include <ctime>
+#include <limits>
+#include <vector>
 
 using namespace std;
+
+void print_vector(std::vector<int> data){
+    // cout << "Size of: " << sizeof(array) << endl;
+    for (int i =0; i < data.size(); i++){
+        cout << data[i] << "\t";
+    }
+    cout << "\n";
+}
 
 
 void play_game(){
@@ -18,6 +28,9 @@ void play_game(){
     cout << "Random number " << random << endl;
     cout << "Guess a number: ";
 
+    // int guesses[250];
+    std::vector<int> guesses;
+
     while (true){
         int guess;
         cin >> guess;
@@ -26,10 +39,14 @@ void play_game(){
             break;
         } else if (abs(guess - random) < 10){
             cout << "You are close, you are +- 10 away from the answer" << endl;
+            guesses.push_back(guess); 
         } else {
             cout << "Guess again" << endl;
+            guesses.push_back(guess); 
         }
     }
+
+    print_vector(guesses);
 
 
 }
@@ -43,7 +60,6 @@ int guess(){
     */
     srand(time(NULL));
     int choice;
-
 
     do {
         cout << "0. Quit\n1. Play Game" << endl;
