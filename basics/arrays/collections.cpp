@@ -2,6 +2,7 @@
 #include <string>
 #include <limits>
 #include <vector>
+#include <array>
 
 using namespace std;
 
@@ -100,13 +101,6 @@ void print_vector(std::vector<int> data){
     cout << "\n";
 }
 
-
-void vectors_and_functions(){
-
-
-}
-
-
 void vectors(){
 
     std::vector<int> items = {12, 13, 20, 33, 22};
@@ -124,9 +118,32 @@ void vectors(){
     cout << items[items.size() - 1] << endl;
 
     print_vector(items);
+}
 
+/*
+ Standard Template Library(STL) array
+*/
 
+void print_stl_array(std::array<int, 20> data, int size){
+    // ranged loop
+    // for (int i : data) {
+    //     cout << i << "  ";
+    // }
 
+    // or use normal loop
+    for (int i = 0; i < size; i++){
+        cout << data[i] << "  ";
+    }
+    cout << "\n";
+}
+
+void stl_array(){
+    // So we manually difine the number of slots just like a normal array
+    std::array<int, 20> data = {1, 2, 3};
+
+    cout << data.size();
+
+    print_stl_array(data, data.size());
 
 }
 
@@ -139,7 +156,9 @@ int main(){
 
     // fill_aray_from_input();
 
-    vectors();
+    // vectors();
+
+    stl_array();
 
     return 0;
 }
