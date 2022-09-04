@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -83,6 +84,16 @@ void continue_and_break(){
     }
 }
 
+void ranged_based_for_loop(){
+
+    std::vector<int> vec = {1, 2, 3, 4, 6};
+
+    for (int n: vec){
+        std::cout << n << "\t";
+    }
+
+}
+
 
 int main(){
 
@@ -92,6 +103,8 @@ int main(){
 
     // do_while_loops();
 
-    continue_and_break();
+    // continue_and_break();
+
+    ranged_based_for_loop();
     return 0;
 }
