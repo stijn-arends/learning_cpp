@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <cmath>
 #include <cstdlib>
@@ -14,6 +15,28 @@ void print_vector(std::vector<int> data){
         cout << data[i] << "\t";
     }
     cout << "\n";
+}
+
+void write_best_score(std::vector<int> guesses){
+
+    // Logic to store the best score to a file
+    int score = guesses.size() + 1;
+    std::ifstream in_file ("best_score.txt");
+    
+    // Check if it already exists
+    if (!in_file.is_open()){
+        std::ofstream out_file ("best_score.txt");
+        out_file << score;
+    } else {
+        int best_score;
+        in_file >> best_score;
+        std::cout << "Best score: " << best_score;
+
+        if (score < best_score){
+            std::ofstream out_file ("best_score.txt");
+            out_file << score;
+            } 
+    }
 }
 
 
@@ -45,6 +68,8 @@ void play_game(){
             guesses.push_back(guess); 
         }
     }
+
+    write_best_score(guesses);
 
     print_vector(guesses);
 
