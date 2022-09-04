@@ -26,12 +26,32 @@ void writing_to_file(){
 }
 
 void reading_from_files(){
-    
+    std::ifstream file ("hello.txt");
+
+    // you can also read an entire line like so:
+    std::string line;
+    getline(file, line);
+    std::cout << "First line: " << line << "\n";
+
+    // Read one at the time
+    std::vector<std::string> names;
+
+    // Read from the file
+    std::string input;
+    while (file >> input){
+        names.push_back(input);
+
+    }
+
+    for (std::string name : names){std::cout << "Name: " << name << "\n";}
+
+
 }
 
 int main(){
 
-    writing_to_file();
+    // writing_to_file();
+    reading_from_files();
 
     return 0;
 }
