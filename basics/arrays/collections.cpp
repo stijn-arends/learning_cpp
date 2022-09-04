@@ -147,6 +147,37 @@ void stl_array(){
 
 }
 
+void multidimensional_arrays(){
+
+    int grades[][3] = {
+            {8, 9, 10}, 
+            {7, 6, 6}, 
+            {5, 4, 8}};
+
+    for (int r = 0; r < 3; r++){
+        for (int c = 0; c < 3; c++){
+            std::cout << grades[r][c] << "\t";
+        }
+        std::cout << "\n";
+    }
+
+    // or using a vector:
+    std::vector<std::vector<int>> grades2 = {
+        {9, 8, 7},
+        {8, 7, 5},
+        {9, 9, 6}};
+
+    // std::cout << grades2.size();
+    // std::cout << grades2[0].size();
+
+    for (std::vector<int> row : grades2){
+        for (int column: row){
+            cout << column << " ";
+        }
+        cout << "\n";
+    }
+}
+
 int main(){
 
 
@@ -158,7 +189,9 @@ int main(){
 
     // vectors();
 
-    stl_array();
+    // stl_array();
+
+    multidimensional_arrays();
 
     return 0;
 }
