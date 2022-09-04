@@ -17,7 +17,7 @@ void print_vector(std::vector<int> data){
     cout << "\n";
 }
 
-void write_best_score(std::vector<int> guesses){
+void save_score(std::vector<int> guesses){
 
     // Logic to store the best score to a file
     int score = guesses.size() + 1;
@@ -69,11 +69,9 @@ void play_game(){
         }
     }
 
-    write_best_score(guesses);
+    save_score(guesses);
 
     print_vector(guesses);
-
-
 }
 
 
