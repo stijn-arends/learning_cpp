@@ -3,7 +3,7 @@
 
 I am following the C++ tutorial made by **Caleb Curry** on [youtube](https://www.youtube.com/playlist?list=PL_c9BZzLwBRJVJsIfe97ey45V4LP_HXiG) to try and learn the c++ programming language.
 
-> Current video: #74
+> Current video: #91
 
 
 ## Install
@@ -79,3 +79,9 @@ make --file makefile
 ```
 
 > NOTE: in windows the make file is called: mingw32-make.exe. To make your life easier please rename this file to: make
+
+### OOP
+
+#### Struct vs class
+**structs** are mostly used to store only variables. There are also called plain old data structs (PODS).
+**classes** are mostly used to store variables and methods.
