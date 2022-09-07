@@ -176,10 +176,16 @@ void multidimensional_arrays(){
         }
         cout << "\n";
     }
+
+    /*
+    Arrays are passed by reference to functions.
+    This means when you change the array inside the function
+    then the array that is outside of the function will also be
+    changed.
+    */
 }
 
 int main(){
-
 
     //arrays();
 
