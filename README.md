@@ -42,3 +42,40 @@ g++ math_stuff.o math_utils.o
 ```
 
 This will produce an executable which is the same as if you were to use `g++ math_stuff.cpp math_utils.cpp`.
+
+### Makefiles
+
+In the makefile you first define the destination and then the source: `<destination>: <source>`. Below that you define how you get from the source to the destination.
+
+Optionally you can also put a `clean` statement at the bottom.
+This will run after everything is done.
+
+Example:
+```makefile
+clean:
+    rm *.o
+```
+> NOTE: only works on mac and linux as `rm` is not available on windows
+
+An example of a makefile:
+
+```makefile
+CC = g++
+
+math: math_stuff.o math_utils.o
+	$(CC) math_stuff.o math_utils.o -o math
+
+math_stuff.o: math_stuff.cpp
+	$(CC) -c math_stuff.cpp
+
+math_utils.o: math_utils.cpp
+	$(CC) -c math_utils.cpp
+```
+
+you can run this file using the following command:
+
+```bash
+make --file makefile
+```
+
+> NOTE: in windows the make file is called: mingw32-make.exe. To make your life easier please rename this file to: make
