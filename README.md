@@ -99,5 +99,14 @@ Just like in python we can change the operator 'dunder' methods like __add__ and
 * Learn more about other `collections`
 * Learn how to properly debug code
 * Learn how to test c++ code
+	* [video](https://www.youtube.com/watch?v=H6x53F5Do24&t=176s) (short) introduction to unit testing using acutest
+	* A [blogpost](https://medium.com/dsckiit/a-guide-to-using-catch2-for-unit-testing-in-c-f0f5450d05fb) about unit test using catch2. 
+		* [tutorial](https://github.com/catchorg/Catch2/blob/devel/docs/tutorial.md) Catch2
 * pointers and dynamic memory
 * templetized classes
+	* [video](https://www.youtube.com/watch?v=mQqzP9EWu58) introduction to class templates
+	* They are basically used to get rid of duplicate code
+* Command line arguments in c++
+	* [basic(Geeks4Geeks)](https://www.geeksforgeeks.org/command-line-arguments-in-c-cpp/) tutorial
+	* CLI framwork [Robust Services Core (RSC)](https://www.codeproject.com/Articles/5269493/A-Command-Line-Interface-CLI-Framework)
+	
