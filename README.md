@@ -3,7 +3,7 @@
 
 I am following the C++ tutorial made by **Caleb Curry** on [youtube](https://www.youtube.com/playlist?list=PL_c9BZzLwBRJVJsIfe97ey45V4LP_HXiG) to try and learn the c++ programming language.
 
-> Current video: #91
+> Current video: #100
 
 
 ## Install
@@ -85,3 +85,19 @@ make --file makefile
 #### Struct vs class
 **structs** are mostly used to store only variables. There are also called plain old data structs (PODS).
 **classes** are mostly used to store variables and methods.
+
+#### Operator overloading
+Just like in python we can change the operator 'dunder' methods like __add__ and __equals__. An example of this is inside the [operator_overloading.cpp](advanced/object_oriented_programming/operator_overloading/operator_overloading.cpp) file.
+
+
+
+## What to study after this series:
+* Learn more about object oriented programming
+	* Get familiar with things like `virtual` or `friend`
+	* How to use classes in multiple files
+	* Multiple inheritance
+* Learn more about other `collections`
+* Learn how to properly debug code
+* Learn how to test c++ code
+* pointers and dynamic memory
+* templetized classes

@@ -5,6 +5,8 @@
 /*
 With encapsulation we 'hide' away some parts of the code
 that the user does not need to know about and should not touch.
+
+With encapsulation we use getters and setters
 */
 
 
