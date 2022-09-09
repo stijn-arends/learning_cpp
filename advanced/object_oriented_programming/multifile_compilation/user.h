@@ -46,10 +46,10 @@ class User{
 
 void output_id(User user);
 
-int User::user_count;
+int User::user_count = 0;
 
 // This is similar to the __str__ or __repr__ dunder methods in python
-// std::ostream & operator << (std::ostream & output, User user);
+std::ostream & operator << (std::ostream & output, User user);
 
-// std::istream & operator >> (std::istream & input, User & user);
+std::istream & operator >> (std::istream & input, User & user);
 #endif
